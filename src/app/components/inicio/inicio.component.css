@@ -1,0 +1,13 @@
+/* Estilo del componente */
+
+#contenedor {
+    position: relative;
+}
+
+button {
+    width: 150px;
+}
+
+agm-map {
+    height: 300px;
+}

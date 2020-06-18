@@ -1,0 +1,38 @@
+<div class="jumbotron">
+    <h1 class="display-4">CityBike</h1>
+    <p class="lead">Aplicacion no oficial de los sistemas de bicicletas compartidas (también conocido como sistemas de bicicletas públicas), que hay a disposición de los usuarios en diferentes ciudades españolas como medio de transporte.</p>
+    <hr class="my-4">
+
+    <div class="row">
+        <div class="col-sm" *ngFor="let network of networks">
+            <button type="button" (click)="detalleElemento(network.id)" class="btn btn-sm blue-gradient">{{network.city}}</button>
+        </div>
+    </div>
+</div>
+
+<div id="contenedor">
+    <section class="text-center text-lg-left dark-grey-text mb-5 mt-3 component drag px-md-5 mx-md-5">
+        <div class="row responsive" *ngIf="networkDetalle">
+            <div class="col-md-12 mb-4 mb-md-0">
+                <h3 contenteditable="false" class="font-weight-bold editable text-center">{{networkDetalle.network.name}} ({{networkDetalle.network.company}})</h3>
+                <span class="pointer">
+                    <div class="z-depth-1-half">
+                        <agm-map [latitude]="networkDetalle.network.location.latitude" [longitude]="networkDetalle.network.location.longitude" [zoom]=12>
+                            <agm-marker *ngFor="let marcador of marcadores; let ind = index" [latitude]="marcador.latitude" [longitude]="marcador.longitude">
+                                <agm-info-window>
+                                    <strong> Direccion: </strong>{{ marcador.name}} <br>
+                                    <strong> Capacidad: </strong>{{ marcador.extra.slots}} - <strong> Vacio: </strong>{{ marcador.empty_slots}}<br>
+                                    <strong> Libres: </strong> {{ marcador.free_bikes }}
+                                    <p *ngIf="marcador.extra.light == 'green' " class="text-center"> <br> <img src="assets/img/green_icon.png" width="32" height="32"></p>
+                                    <p *ngIf="marcador.extra.light == 'red' " class="text-center"> <br> <img src="assets/img/red_icon.png" width="32" height="32"></p>
+                                    <p *ngIf="marcador.extra.light == 'yellow' " class="text-center"> <br> <img src="assets/img/yellow_icon.png" width="32" height="32"></p>
+                                </agm-info-window>
+                            </agm-marker>
+                          </agm-map>
+                        <a><div class="mask rgba-white-light"></div></a>
+                    </div>
+                </span>
+            </div>
+        </div>
+    </section>
+</div>

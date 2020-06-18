@@ -1,0 +1,9 @@
+/* Estilo del componente */
+
+header {
+    width: 100%;
+}
+
+nav {
+    min-height: 75px;
+}
