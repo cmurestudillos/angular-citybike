@@ -30,7 +30,8 @@ export class InicioComponent implements OnInit {
   ngOnInit(): void {
     this._service.getNetworkBikes()
     .subscribe(data => {
-      this.networks = data
+      // console.log(data);
+        this.networks = data
     });
   }
 
