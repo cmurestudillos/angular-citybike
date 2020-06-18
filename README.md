@@ -1,6 +1,6 @@
 # AppCityBike
 
-Ejemplo de aplicacion SPA realizada en Angular, Angular Material y consumiento la API Rest CoinDesk de BitCoin.
+Ejemplo de SPA realizada en Angular consumiento la API Restful de "http://api.citybik.es".
 
 ## Instalar Dependencias
 - Ejecutar `npm install`
