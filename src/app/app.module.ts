@@ -14,6 +14,8 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 // Google Maps de Angular 9 
 import { AgmCoreModule } from '@agm/core';
+// APIKey - Maps
+import mapsApiKey from '../config/mapskey';
 
 @NgModule({
   declarations: [
@@ -28,8 +30,8 @@ import { AgmCoreModule } from '@agm/core';
     AppRoutingModule,
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBQoCXbV9SWEjT_U-NRCbq9C3gZzV3qFDk'
-    })
+      apiKey: mapsApiKey.mapsKey
+    }),
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
