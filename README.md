@@ -1,4 +1,8 @@
-# AppCityBike
+<p align="center">
+  <a href="https://www.buymeacoffee.com/cmurestudillos"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=cmurestudillos&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"></a>
+</p>
+
+# CityBike - Angular
 
 Ejemplo de SPA realizada en Angular consumiento la API Restful de "http://api.citybik.es".
 
